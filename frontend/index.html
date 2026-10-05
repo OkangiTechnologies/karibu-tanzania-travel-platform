@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karibu Tanzania — Tourism Intelligence Platform</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none"><path d="M2 20c4-6 8 4 12-2s8 4 12-2" stroke="#3FC4CC" stroke-width="2.2" stroke-linecap="round"/><path d="M16 4c2 4 2 8 0 12" stroke="#D9962E" stroke-width="2.2" stroke-linecap="round"/></svg>
+      <div class="brand-name">Karibu <span>Tanzania</span></div>
+      <div class="brand-version">v1.3 · Concept</div>
+    </div>
+    <div class="nav-tabs" id="navTabs">
+      <button class="nav-tab active" data-view="overview">Overview</button>
+      <button class="nav-tab" data-view="chat">Concierge</button>
+      <button class="nav-tab" data-view="planner">Planner</button>
+      <button class="nav-tab" data-view="destinations">Destinations</button>
+      <button class="nav-tab" data-view="architecture">Architecture</button>
+      <button class="nav-tab" data-view="roadmap">Roadmap</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ OVERVIEW ============ -->
+<section class="view active" id="view-overview">
+  <div class="hero">
+    <div class="hero-horizon">
+      <svg viewBox="0 0 1200 150" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="1030" cy="40" r="46" fill="#3FC4CC" opacity="0.18"/>
+        <circle cx="1030" cy="40" r="26" fill="#3FC4CC" opacity="0.35"/>
+        <path d="M0 150V108c30-6 55 4 80-2s45-14 75-8 50 10 78 4 48-14 76-6 52 12 80 4 46-16 74-8 50 12 78 6 48-12 76-4 50 12 78 6 46-10 72-4 48 10 74 4 40-8 63-2V150z" fill="#082F3A"/>
+        <path d="M0 150V120c26-4 40 2 40-10 0-9 8-9 8 0 0 9 10 9 10-1 0-8 7-8 7 1s9 9 9-1c0-9 7-9 7 1 0 9 9 9 9-1 0-8 7-8 7 1 0 8 16 4 16-4 0-10 8-10 8 0 0 9 9 9 9-1 0-9 7-9 7 1 0 9 20 6 20-4 0-9 7-9 7 1 0 8 9 8 9-2 0-8 7-8 7 2 0 8 22 10 34 4V150z" fill="#062A34"/>
+        <path d="M905 120c0-12 6-12 6 0M916 120V96M916 96a4 4 0 018 0v3h-8z" stroke="#0A3B49" stroke-width="1.4" fill="none"/>
+        <path d="M170 96l38 24H132z" fill="#062A34"/>
+        <path d="M170 60v36" stroke="#062A34" stroke-width="2"/>
+        <path d="M170 62c18 4 18 20 0 24" fill="#0A3B49"/>
+        <path d="M0 150c40-10 90-10 140 0s90 10 140 0 90-10 140 0 90 10 140 0 90-10 140 0 90 10 140 0 90-10 140 0 90 10 140 0v20H0z" fill="#0A3B49" opacity="0.55"/>
+        <path d="M0 150c50-8 100-8 150 0s100 8 150 0 100-8 150 0 100 8 150 0 100-8 150 0 100 8 150 0v20H0z" fill="#062A34"/>
+      </svg>
+    </div>
+    <div class="wrap hero-grid">
+      <div>
+        <div class="hero-eyebrow-row"><span class="dot"></span> Zanzibar &amp; the Northern Safari Circuit · Tourism Intelligence</div>
+        <h1>The intelligence layer behind Tanzania's tourism economy.</h1>
+        <p class="hero-sub">An AI concierge and trip planner covering Zanzibar and mainland safari destinations, for travellers and tourism operators.</p>
+        <div class="hero-cta-row">
+          <button class="btn btn-primary" onclick="showView('planner')">Plan a trip</button>
+          <button class="btn btn-outline" onclick="showView('chat')">Ask the concierge</button>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat"><div class="num">25+</div><div class="lbl">Destinations mapped</div></div>
+        <div class="hero-stat"><div class="num">2</div><div class="lbl">Regions — island &amp; safari</div></div>
+        <div class="hero-stat"><div class="num">TZS</div><div class="lbl">Currency</div></div>
+        <div class="hero-stat"><div class="num">ZNZ / JRO</div><div class="lbl">Gateway airports</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap section" style="padding-bottom:0;">
+    <div class="section-head">
+      <div><div class="section-tag">Start here</div><h2>Three tools, one destination brain</h2></div>
+    </div>
+    <div class="quick-grid">
+      <div class="quick-card" onclick="showView('chat')">
+        <svg class="qi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v12H8l-4 4V4z"/></svg>
+        <h3>AI Concierge</h3><p>Attractions, culture, transport and logistics — answered directly.</p>
+      </div>
+      <div class="quick-card" onclick="showView('planner')">
+        <svg class="qi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16v16H4z"/><path d="M4 9h16M9 4v16"/></svg>
+        <h3>AI Trip Planner</h3><p>Day-by-day itinerary from your duration, budget and interests.</p>
+      </div>
+      <div class="quick-card" onclick="showView('destinations')">
+        <svg class="qi" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z"/></svg>
+        <h3>Destinations</h3><p>Curated places, tagged by what they're best for.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="showcase-band">
+    <div class="wrap">
+      <div class="showcase-head">
+        <div>
+          <div class="section-tag" style="color:var(--lagoon-bright);">Featured</div>
+          <h2 style="color:var(--white);">From the reef to the crater rim</h2>
+        </div>
+        <button class="btn btn-outline" onclick="showView('destinations')">See all 25 →</button>
+      </div>
+      <div class="showcase-scroll" id="showcaseScroll"></div>
+    </div>
+  </div>
+
+  <div class="wrap section">
+    <div class="section-head">
+      <div><div class="section-tag">Why this platform</div><h2>Built to be actually used, not just demoed</h2></div>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"/></svg></div>
+        <h3>Zero setup, real AI</h3>
+        <p>Works fully offline out of the box — no API key required. Add one later and it upgrades to live Claude automatically, no code changes.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-7.5 7-12a7 7 0 10-14 0c0 4.5 7 12 7 12z"/></svg></div>
+        <h3>25+ places, honestly routed</h3>
+        <p>Every generated itinerary respects real geography — the planner won't fake a route between places that don't actually connect.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+        <h3>Built for travellers and operators</h3>
+        <p>A concierge and planner for visitors today, on an architecture already designed for demand forecasting and business tools tomorrow.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 3H5a2 2 0 00-2 2v3m18 0V5a2 2 0 00-2-2h-3m0 18h3a2 2 0 002-2v-3M3 16v3a2 2 0 002 2h3"/></svg></div>
+        <h3>Open and inspectable</h3>
+        <p>Full source, no lock-in — runs anywhere Node.js runs. Read exactly how the concierge and planner work, and change what you need.</p>
+      </div>
+    </div>
+
+    <div class="overview-split" style="margin-top:52px;">
+      <div class="info-block">
+        <h3>Planning basics</h3>
+        <ul class="fact-list">
+          <li><b>Best season</b> Jun–Oct and Dec–Feb driest, best for both beach and safari game viewing; Mar–May low season, lowest prices.</li>
+          <li><b>Entry</b> Visa on arrival or e-visa for most nationalities; yellow fever certificate if arriving from an at-risk country.</li>
+          <li><b>Currency</b> TZS nationwide; USD (2009+ notes) accepted for hotels, parks, tours.</li>
+          <li><b>Getting there</b> Fly into ZNZ (Zanzibar) or JRO (Kilimanjaro, for the safari circuit); a domestic flight links the two in about 1–1.5h.</li>
+          <li><b>Getting around</b> Zanzibar: dala-dala, taxis or a hired driver. Mainland parks: guided 4x4 safari vehicle, arranged through your operator.</li>
+          <li><b>Local custom</b> Zanzibar's coast is predominantly Muslim — modest dress appreciated outside resorts, especially Stone Town.</li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <h3>Seasonality at a glance</h3>
+        <div class="season-strip">
+          <div class="season-seg" style="background:#2E5F6B;">Jan</div>
+          <div class="season-seg" style="background:#2E5F6B;">Feb</div>
+          <div class="season-seg" style="background:#6B7C80;">Mar</div>
+          <div class="season-seg" style="background:#8A9B9E;">Apr</div>
+          <div class="season-seg" style="background:#8A9B9E;">May</div>
+          <div class="season-seg" style="background:#2FA6AE;">Jun</div>
+          <div class="season-seg" style="background:#D9962E;">Jul</div>
+          <div class="season-seg" style="background:#D9962E;">Aug</div>
+          <div class="season-seg" style="background:#2FA6AE;">Sep</div>
+          <div class="season-seg" style="background:#2FA6AE;">Oct</div>
+          <div class="season-seg" style="background:#6B7C80;">Nov</div>
+          <div class="season-seg" style="background:#D9962E;">Dec</div>
+        </div>
+        <p style="margin-top:10px; font-size:0.78rem; color:var(--ink-soft);">Gold = peak · Teal = shoulder/dry · Grey = rains</p>
+        <p style="margin-top:8px; font-size:0.78rem; color:var(--ink-soft);">Applies broadly nationwide; migration timing on safari shifts month to month — ask the concierge for specifics.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cta-banner">
+    <div class="wrap cta-banner-inner">
+      <div>
+        <h2>Ready to plan your Tanzania trip?</h2>
+        <p>Set a budget, pick a region, get a real itinerary in seconds.</p>
+      </div>
+      <div class="hero-cta-row" style="margin-top:0;">
+        <button class="btn btn-primary" onclick="showView('planner')">Plan a trip</button>
+        <button class="btn btn-outline" onclick="showView('chat')">Ask the concierge</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAT ============ -->
+<section class="view" id="view-chat">
+  <div class="wrap section">
+    <div class="section-head">
+      <div><div class="section-tag">AI Concierge</div><h2>Ask about Tanzania</h2><p>Zanzibar and mainland safari destinations, culture, transport and logistics — answered directly.</p></div>
+    </div>
+    <div class="chat-shell">
+      <div class="chat-side">
+        <h3>Try asking</h3>
+        <p>Tap a question, or type your own.</p>
+        <button class="prompt-chip" onclick="sendPreset(this)">What's the best area to stay for a first-timer?</button>
+        <button class="prompt-chip" onclick="sendPreset(this)">How do I combine a safari with Zanzibar?</button>
+        <button class="prompt-chip" onclick="sendPreset(this)">Is Kilimanjaro a hard climb?</button>
+        <button class="prompt-chip" onclick="sendPreset(this)">Pemba or Mafia for diving?</button>
+        <button class="prompt-chip" onclick="sendPreset(this)">What should a spice tour actually include?</button>
+      </div>
+      <div class="chat-main">
+        <div class="chat-log" id="chatLog">
+          <div class="msg bot">Karibu! Ask me about Zanzibar, the northern safari circuit, culture, transport, food or anything else you're planning.</div>
+        </div>
+        <div class="chat-input-row">
+          <input type="text" id="chatInput" placeholder="Ask about destinations, safari parks, transport, culture…" onkeydown="if(event.key==='Enter')sendChat();">
+          <button class="send-btn" id="sendBtn" onclick="sendChat()">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TRIP PLANNER ============ -->
+<section class="view" id="view-planner">
+  <div class="wrap section">
+    <div class="section-head">
+      <div><div class="section-tag">AI Trip Planner</div><h2>Build a personalized itinerary</h2><p>Set region, duration, budget and interests — get a realistic day-by-day route.</p></div>
+    </div>
+    <div class="planner-grid">
+      <div class="planner-form">
+        <div class="field">
+          <label>Region</label>
+          <select id="regionSelect">
+            <option value="zanzibar" selected>Zanzibar</option>
+            <option value="safari">Northern Safari Circuit</option>
+            <option value="combined">Combined — Safari + Zanzibar</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Trip length <span class="hint" id="daysHintLbl">4 days</span></label>
+          <div class="range-row">
+            <input type="range" id="daysRange" min="2" max="14" value="4" oninput="updateDays()">
+            <div class="range-val" id="daysVal">4</div>
+          </div>
+        </div>
+        <div class="field">
+          <label>Budget level</label>
+          <select id="budgetSelect">
+            <option value="backpacker">Backpacker — hostels, dala-dala, street food</option>
+            <option value="mid-range" selected>Mid-range — 3-star hotels, private transfers</option>
+            <option value="luxury">Luxury — boutique resorts, private guides</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Travel party</label>
+          <select id="partySelect">
+            <option value="solo traveller">Solo traveller</option>
+            <option value="couple" selected>Couple</option>
+            <option value="family with children">Family with children</option>
+            <option value="group of friends">Group of friends</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Interests <span class="hint">pick a few</span></label>
+          <div class="chip-grid" id="interestChips">
+            <button class="chip" data-v="beaches">Beaches</button>
+            <button class="chip" data-v="history & culture">History &amp; culture</button>
+            <button class="chip" data-v="diving & snorkeling">Diving &amp; snorkeling</button>
+            <button class="chip" data-v="food">Food</button>
+            <button class="chip" data-v="nature & wildlife">Nature &amp; wildlife</button>
+            <button class="chip" data-v="relaxation">Relaxation</button>
+            <button class="chip" data-v="watersports">Watersports</button>
+            <button class="chip" data-v="nightlife">Nightlife</button>
+          </div>
+        </div>
+        <button class="generate-btn" id="genBtn" onclick="generateItinerary()">Generate itinerary</button>
+      </div>
+      <div class="itinerary-panel" id="itinPanel">
+        <div class="itin-empty">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 20l-5-2V6l5 2m0 12l6-2m-6 2V8m6 10l5 2V8l-5-2m0 12V6m0 0l-6 2"/></svg>
+          <p>Set your preferences and generate a day-by-day plan.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DESTINATIONS ============ -->
+<section class="view" id="view-destinations">
+  <div class="wrap section">
+    <div class="section-head">
+      <div><div class="section-tag">Destinations</div><h2>Where to go, and why</h2><p>25 places across Zanzibar and mainland Tanzania, tagged by what each suits.</p></div>
+    </div>
+    <div class="dest-filter-row" id="destFilterRow"></div>
+    <div class="dest-count" id="destCount"></div>
+    <div class="dest-grid" id="destGrid"></div>
+  </div>
+</section>
+
+<!-- ============ ARCHITECTURE ============ -->
+<section class="view" id="view-architecture">
+  <div class="wrap section">
+    <div class="section-head">
+      <div><div class="section-tag">Technical Architecture</div><h2>System design &amp; engineering detail</h2><p>Current build scope, and the production architecture it scales into.</p></div>
+    </div>
+
+    <div class="scope-note">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+      <p><b>Scope.</b> The Concierge and Trip Planner call the Claude API directly and are fully functional. Everything else below — gateway, data stores, models, integrations — is the <b>target production design</b>, not live services.</p>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-head"><h3>System architecture</h3><span class="subsection-note">Five layers, client to external systems</span></div>
+      <div class="arch-diagram">
+
+        <div class="arch-layer">
+          <div class="arch-layer-label"><span class="arch-layer-index">01</span><b>Client layer</b><span class="arch-sub">What visitors and operators use</span></div>
+          <div class="arch-nodes">
+            <div class="arch-node"><b>Responsive web app</b><span>Concierge, planner, dashboards</span></div>
+            <div class="arch-node"><b>Progressive mobile app</b><span>Offline itinerary &amp; maps</span></div>
+            <div class="arch-node"><b>Operator console</b><span>Hotels &amp; tour operators</span></div>
+            <div class="arch-node"><b>Tourism-board view</b><span>Aggregated visitor insight</span></div>
+          </div>
+        </div>
+        <div class="arch-connector"><svg viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 0v18M2 14l6 6 6-6"/></svg></div>
+
+        <div class="arch-layer">
+          <div class="arch-layer-label"><span class="arch-layer-index">02</span><b>API &amp; application services</b><span class="arch-sub">Stateless services behind a gateway</span></div>
+          <div class="arch-nodes">
+            <div class="arch-node"><b>API gateway</b><span>AuthN/Z, rate limiting, routing</span></div>
+            <div class="arch-node"><b>Chat orchestration</b><span>Session state, context assembly</span></div>
+            <div class="arch-node"><b>Itinerary service</b><span>Constraint handling, validation</span></div>
+            <div class="arch-node"><b>Rate limiter &amp; cache</b><span>Redis-backed request cache</span></div>
+          </div>
+        </div>
+        <div class="arch-connector"><svg viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 0v18M2 14l6 6 6-6"/></svg></div>
+
+        <div class="arch-layer">
+          <div class="arch-layer-label"><span class="arch-layer-index">03</span><b>AI / ML layer</b><span class="arch-sub">The platform's intelligence</span></div>
+          <div class="arch-nodes">
+            <div class="arch-node"><b>LLM concierge</b><span>Retrieval-grounded Q&amp;A</span></div>
+            <div class="arch-node"><b>Itinerary generation</b><span>Prompted planning + validation</span></div>
+            <div class="arch-node"><b>Recommendation engine</b><span>Collaborative + content filtering</span></div>
+            <div class="arch-node"><b>Demand forecasting</b><span>Time-series arrivals &amp; occupancy</span></div>
+          </div>
+        </div>
+        <div class="arch-connector"><svg viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 0v18M2 14l6 6 6-6"/></svg></div>
+
+        <div class="arch-layer">
+          <div class="arch-layer-label"><span class="arch-layer-index">04</span><b>Data layer</b><span class="arch-sub">System of record &amp; knowledge base</span></div>
+          <div class="arch-nodes">
+            <div class="arch-node"><b>Destinations DB</b><span>Places, activities, operators</span></div>
+            <div class="arch-node"><b>Vector knowledge store</b><span>Embeddings for grounding</span></div>
+            <div class="arch-node"><b>Bookings DB</b><span>Row-level encrypted</span></div>
+            <div class="arch-node"><b>Content cache</b><span>CDN-fronted read replicas</span></div>
+          </div>
+        </div>
+        <div class="arch-connector"><svg viewBox="0 0 16 22" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M8 0v18M2 14l6 6 6-6"/></svg></div>
+
+        <div class="arch-layer">
+          <div class="arch-layer-label"><span class="arch-layer-index">05</span><b>External integrations</b><span class="arch-sub">Systems outside the platform</span></div>
+          <div class="arch-nodes">
+            <div class="arch-node"><b>Ferry &amp; flight data</b><span>Operator &amp; airline schedules</span></div>
+            <div class="arch-node"><b>Hotel PMS / OTA feeds</b><span>Availability &amp; rate sync</span></div>
+            <div class="arch-node"><b>Payment gateways</b><span>Card &amp; mobile money</span></div>
+            <div class="arch-node"><b>Tourism board feed</b><span>Official arrivals data</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-head"><h3>Technology stack</h3><span class="subsection-note">Target production stack</span></div>
+      <div class="stack-grid">
+        <div class="stack-card"><h4>Frontend</h4><div class="stack-badges"><span>TypeScript</span><span>React</span><span>Responsive / WCAG 2.1 AA</span><span>PWA</span></div></div>
+        <div class="stack-card"><h4>Backend &amp; API</h4><div class="stack-badges"><span>Node.js</span><span>REST + GraphQL</span><span>API gateway</span><span>Redis cache</span></div></div>
+        <div class="stack-card"><h4>AI / ML</h4><div class="stack-badges"><span>Claude (LLM)</span><span>RAG pipeline</span><span>Vector DB</span><span>Time-series forecasting</span></div></div>
+        <div class="stack-card"><h4>Data &amp; storage</h4><div class="stack-badges"><span>PostgreSQL</span><span>Data warehouse</span><span>Object storage</span><span>CDN</span></div></div>
+        <div class="stack-card"><h4>Infrastructure</h4><div class="stack-badges"><span>Containerised microservices</span><span>Autoscaling</span><span>Multi-AZ deployment</span></div></div>
+        <div class="stack-card"><h4>Observability</h4><div class="stack-badges"><span>Centralised logging</span><span>Metrics &amp; tracing</span><span>Uptime monitoring</span></div></div>
+      </div>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-head"><h3>API reference</h3><span class="subsection-note">Illustrative surface of the production service</span></div>
+      <table class="api-table">
+        <thead><tr><th style="width:70px;">Method</th><th style="width:260px;">Endpoint</th><th>Description</th></tr></thead>
+        <tbody>
+          <tr><td><span class="api-method post">POST</span></td><td class="api-path">/api/v1/concierge/chat</td><td class="api-desc">Returns a grounded concierge reply for a message + session ID.</td></tr>
+          <tr><td><span class="api-method post">POST</span></td><td class="api-path">/api/v1/itinerary/generate</td><td class="api-desc">Returns a structured day-by-day plan from trip parameters.</td></tr>
+          <tr><td><span class="api-method get">GET</span></td><td class="api-path">/api/v1/destinations</td><td class="api-desc">Lists destinations, filterable by region, tag and activity.</td></tr>
+          <tr><td><span class="api-method post">POST</span></td><td class="api-path">/api/v1/operators/listings</td><td class="api-desc">Creates or updates an operator's availability and rates.</td></tr>
+          <tr><td><span class="api-method get">GET</span></td><td class="api-path">/api/v1/health</td><td class="api-desc">Service and dependency health for monitoring.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="subsection">
+      <div class="subsection-head"><h3>Security &amp; compliance</h3><span class="subsection-note">Design commitments for production</span></div>
+      <div class="compliance-grid">
+        <div class="compliance-card">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 118 0v3"/></svg>Data protection</h4>
+          <ul>
+            <li>TLS 1.3 in transit; AES-256 at rest</li>
+            <li>PII minimisation — no data retained beyond session unless booking requires it</li>
+            <li>Aligned with Tanzania's PDPA and GDPR principles</li>
+          </ul>
+        </div>
+        <div class="compliance-card">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>Access control</h4>
+          <ul>
+            <li>Role-based access for the operator console</li>
+            <li>Scoped API keys per integration partner</li>
+            <li>Full audit log of data &amp; admin actions</li>
+          </ul>
+        </div>
+        <div class="compliance-card">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 4v5c0 4.8-3.4 8.6-8 9-4.6-.4-8-4.2-8-9V7z"/></svg>Platform resilience</h4>
+          <ul>
+            <li>Rate limiting &amp; abuse detection at the gateway</li>
+            <li>Graceful degradation — safe failure, clear retry message</li>
+            <li>Automated backups with point-in-time recovery</li>
+          </ul>
+        </div>
+        <div class="compliance-card">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg>Model governance</h4>
+          <ul>
+            <li>Concierge scoped to Tanzania travel topics only</li>
+            <li>Forecasting &amp; recommendation models versioned and evaluated before rollout</li>
+            <li>Human-in-the-loop review for low-confidence responses</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="subsection" style="margin-bottom:0;">
+      <div class="subsection-head"><h3>Non-functional targets</h3><span class="subsection-note">Production service-level objectives</span></div>
+      <div class="nfr-row">
+        <div class="nfr-card"><div class="num">99.9%</div><div class="lbl">Core service uptime target</div></div>
+        <div class="nfr-card"><div class="num">&lt;300ms</div><div class="lbl">p95 API latency (excl. LLM)</div></div>
+        <div class="nfr-card"><div class="num">10K+</div><div class="lbl">Concurrent users at launch</div></div>
+        <div class="nfr-card"><div class="num">&lt;3s</div><div class="lbl">Concierge first-response time</div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============ ROADMAP ============ -->
+<section class="view" id="view-roadmap">
+  <div class="wrap section">
+    <div class="section-head">
+      <div><div class="section-tag">What's next</div><h2>Future-ready AI &amp; ML roadmap</h2><p>From concierge and planner to full destination intelligence.</p></div>
+    </div>
+    <div class="roadmap-list">
+      <div class="phase">
+        <div class="phase-num">01</div>
+        <div><h4>Foundation — concierge, planner &amp; reporting</h4>
+        <p>Conversational Q&amp;A and personalized itineraries.</p>
+        <div class="phase-tags"><span>Live in this build</span><span>NLP chatbot</span><span>Itinerary generation</span></div></div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">02</div>
+        <div><h4>Personalization &amp; demand forecasting</h4>
+        <p>A recommendation engine that learns from behaviour, plus short-term arrival and occupancy forecasting.</p>
+        <div class="phase-tags"><span>Recommendation engine</span><span>Demand forecasting</span><span>Dynamic pricing signals</span></div></div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">03</div>
+        <div><h4>Sentiment &amp; quality monitoring</h4>
+        <p>Sentiment analysis across reviews to flag service issues early, plus multilingual concierge support.</p>
+        <div class="phase-tags"><span>Review sentiment analysis</span><span>Multilingual NLP</span><span>Service-quality alerts</span></div></div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">04</div>
+        <div><h4>Smart destination management</h4>
+        <p>Crowd-density insight at high-traffic sites, plus computer-vision reef and beach monitoring.</p>
+        <div class="phase-tags"><span>Crowd &amp; capacity insight</span><span>Reef &amp; coastal monitoring</span><span>Sustainable tourism</span></div></div>
+      </div>
+      <div class="phase">
+        <div class="phase-num">05</div>
+        <div><h4>SME &amp; operator enablement</h4>
+        <p>A lightweight console so small guesthouses and operators can manage demand and listings.</p>
+        <div class="phase-tags"><span>SME dashboard</span><span>Listings &amp; availability</span><span>Inclusive growth</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap fm-main">Karibu Tanzania</div>
+</footer>
+
+
+<script src="js/config.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/chat.js"></script>
+<script src="js/planner.js"></script>
+<script src="js/destinations.js"></script>
+</body>
+</html>
